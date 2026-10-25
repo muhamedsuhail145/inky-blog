@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inkly — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">inky<span>.</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="create-blog.html">Write a story</a>
+      <a href="auth.html">Account</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="dashboard-heading">
+      <div>
+        <p class="eyebrow">YOUR WORKSPACE</p>
+        <h1>My Dashboard</h1>
+        <p>Manage your stories in one place.</p>
+      </div>
+      <a class="primary-link" href="create-blog.html">+ Write a story</a>
+    </section>
+
+    <section class="dashboard-stats">
+      <article class="stat-card">
+        <span>Total stories</span>
+        <strong id="totalCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Published</span>
+        <strong id="publishedCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Drafts</span>
+        <strong id="draftCount">0</strong>
+      </article>
+    </section>
+
+    <section class="dashboard-posts">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR ARTICLES</p>
+          <h2>Manage stories</h2>
+        </div>
+        <select id="statusFilter" aria-label="Filter stories by status">
+          <option value="All">All stories</option>
+          <option value="Published">Published</option>
+          <option value="Draft">Drafts</option>
+        </select>
+      </div>
+
+      <div id="dashboardList" class="dashboard-list"></div>
+      <p id="dashboardMessage" class="form-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="index.html">inkly<span>.</span></a>
+    <p>Made for curious minds.</p>
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

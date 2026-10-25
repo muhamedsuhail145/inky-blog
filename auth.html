@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Inky — Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <header class="site-header">
+    <a class="logo" href="index.html">inky<span>.</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="auth-container">
+    <section class="auth-card">
+      <a class="logo auth-logo" href="index.html">inky<span>.</span></a>
+
+      <h1 id="formTitle">Create your account</h1>
+      <p id="formSubtitle">Join Inky and start sharing your ideas.</p>
+
+      <div class="auth-tabs">
+        <button type="button" id="registerTab" class="auth-tab active">
+          Register
+        </button>
+        <button type="button" id="loginTab" class="auth-tab">
+          Login
+        </button>
+      </div>
+
+      <form id="authForm">
+        <div class="form-field" id="nameField">
+          <label for="fullName">Full name</label>
+          <input
+            id="fullName"
+            name="fullName"
+            type="text"
+            placeholder="Enter your name"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="At least 8 characters"
+            minlength="8"
+            autocomplete="new-password"
+            required
+          >
+        </div>
+
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+
+        <button type="submit" class="auth-submit" id="submitButton">
+          Create account
+        </button>
+      </form>
+
+      <p class="auth-switch" id="switchText">
+        Already have an account?
+        <button type="button" class="auth-submit" id="switchButton">Login</button>
+      </p>
+
+      <p class="auth-note">
+        Learning prototype: this form does not create real accounts yet.
+      </p>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

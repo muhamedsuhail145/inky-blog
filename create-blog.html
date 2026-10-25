@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inly — Create a Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">inky<span>.</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="auth.html">Account</a>
+    </nav>
+  </header>
+
+  <main class="editor-container">
+    <section class="editor-heading">
+      <p class="eyebrow">YOUR NEXT STORY</p>
+      <h1>Create a blog post</h1>
+      <p>Turn your ideas into a story worth sharing.</p>
+    </section>
+
+    <form id="blogForm" class="editor-form">
+      <div class="form-field">
+        <label for="blogTitle">Article title</label>
+        <input
+          id="blogTitle"
+          type="text"
+          maxlength="100"
+          placeholder="Give your story a great title"
+          required
+        >
+      </div>
+
+      <div class="form-field">
+        <label for="blogCategory">Category</label>
+        <select id="blogCategory" required>
+          <option value="">Choose a category</option>
+          <option value="Technology">Technology</option>
+          <option value="Lifestyle">Lifestyle</option>
+          <option value="Learning">Learning</option>
+          <option value="Personal Stories">Personal Stories</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="blogExcerpt">Short description</label>
+        <textarea
+          id="blogExcerpt"
+          rows="3"
+          maxlength="240"
+          placeholder="What is your article about?"
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-field">
+        <label for="blogContent">Your article</label>
+        <textarea
+          id="blogContent"
+          rows="12"
+          placeholder="Start writing your story here..."
+          required
+        ></textarea>
+        <p class="word-count" id="wordCount">0 words</p>
+      </div>
+
+    <div class="editor-actions">
+        <button type="button" id="previewButton" class="secondary-button">
+            Preview article
+        </button>
+        <button type="button" id="draftButton" class="secondary-button">
+            Save draft
+        </button>
+        <button type="submit" id="publishButton">
+            Publish article
+        </button>
+    </div>
+
+      <p id="editorMessage" class="form-message" aria-live="polite"></p>
+    </form>
+
+    <section id="previewPanel" class="preview-panel" hidden>
+      <p class="eyebrow">ARTICLE PREVIEW</p>
+      <p id="previewCategory" class="card-category"></p>
+      <h2 id="previewTitle"></h2>
+      <p id="previewExcerpt" class="preview-excerpt"></p>
+      <div class="preview-content" id="previewContent"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="index.html">inky<span>.</span></a>
+    <p>Made for curious minds.</p>
+  </footer>
+
+  <script src="create-blog.js"></script>
+</body>
+</html>
