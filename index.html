@@ -1,76 +1,96 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inky-stories & ideas</inky-myblog></title>
+    <title>Inky — Stories & Ideas</title>
     <link rel="stylesheet" href="style.css">
- </head>
- <body>
-    <header class="site-header">
-          <a class="logo" href="#">inky<span>.</span></a>
-          
+</head>
+<body>
+
+<header class="site-header">
+    <a class="logo" href="index.html">inky<span>.</span></a>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="#articles">Explore</a>
         <a href="create-blog.html">Write a story</a>
         <a href="dashboard.html">Dashboard</a>
-        <a class="nav-button" href="auth.html">Login</a>
-    </nav>
 
-        
-    </header>
-    <main>
-        <section class="hero" id="home"></section>
-            <p class="eyebrow">A HOME FOR YOUR IDEAS</p>
-            <h1>Stories worth<br> <span>sharing.</span></h1>
-            <p class="eyebrow">
-                Discover fresh perspectives, learn something new, 
-                and find inspiration in every story.
-            </p>
-            <a class="primary-link" href="#articles">Explore stories →</a>
-        </section>
-            <section class="articles-section" id="articles">
-            <div class="section-heading">
-        <div>
-            <p class="eyebrow">THE INKLY JOURNAL</p>
-            <h2>Explore stories</h2>
-        </div>
+        <span id="guestLinks">
+            <a class="nav-button" href="auth.html">Login / Register</a>
+        </span>
+
+        <span id="userLinks" hidden>
+            <span id="welcomeUser" aria-live="polite"></span>
+            <button type="button" class="nav-button" id="logoutButton">
+                Logout
+            </button>
+        </span>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <p class="eyebrow">A HOME FOR YOUR IDEAS</p>
+
+        <h1>Stories worth<br><span>sharing.</span></h1>
+
+        <p class="eyebrow">
+            Discover fresh perspectives, learn something new,
+            and find inspiration in every story.
+        </p>
+
+        <a class="primary-link" href="#articles">
+            Explore stories →
+        </a>
+    </section>
+
+    <section class="articles-section" id="articles">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">THE INKY JOURNAL</p>
+                <h2>Explore stories</h2>
+            </div>
+
             <span id="postCount">0 stories</span>
         </div>
-          <input
-        id="searchInput"
-        type="search"
-        placeholder="Search stories..."
-        aria-label="Search stories"
-      >
 
-      <div class="filters" id="categoryFilters">
-        <button class="filter-button active" data-category="All">All</button>
-        <button class="filter-button" data-category="Technology">Technology</button>
-        <button class="filter-button" data-category="Lifestyle">Lifestyle</button>
-        <button class="filter-button" data-category="Learning">Learning</button>
-      </div>
+        <input
+            id="searchInput"
+            type="search"
+            placeholder="Search stories..."
+            aria-label="Search stories"
+        >
+
+        <div class="filters" id="categoryFilters">
+            <button class="filter-button active" data-category="All">All</button>
+            <button class="filter-button" data-category="Technology">Technology</button>
+            <button class="filter-button" data-category="Lifestyle">Lifestyle</button>
+            <button class="filter-button" data-category="Learning">Learning</button>
+        </div>
 
         <div class="blog-grid" id="blogGrid"></div>
-        </section>
-        <section class="about-section" id="about">
-            <p class="eyebrow">OUR PURPOSE</p>
-            <h2>Every idea deserves a place.</h2>
-            <p>Inky is a space to share knowledge, creativity,
-                and the stories that make us think.</p>
-        </section>
+    </section>
+
+    <section class="about-section" id="about">
+        <p class="eyebrow">OUR PURPOSE</p>
+        <h2>Every idea deserves a place.</h2>
+        <p>
+            Inky is a space to share knowledge, creativity,
+            and the stories that make us think.
+        </p>
+    </section>
 
     <footer>
-      <a class="logo" href="#home">inky<span>.</span></a>
-      <p>Made for curious minds.</p>
+        <a class="logo" href="#home">inky<span>.</span></a>
+        <p>Made for curious minds.</p>
     </footer>
-  </main>
+</main>
 
+<script src="app.js"></script>
+<script src="session-ui.js"></script>
 
-
-    </main>
-    <script src="app.js"></script>
-    
- </body>
- </html>
+</body>
+</html>

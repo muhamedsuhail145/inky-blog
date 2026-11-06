@@ -30,20 +30,20 @@
           Login
         </button>
       </div>
-
-      <form id="authForm">
-        <div class="form-field" id="nameField">
-          <label for="fullName">Full name</label>
-          <input
-            id="fullName"
-            name="fullName"
-            type="text"
-            placeholder="Enter your name"
-            autocomplete="name"
-            required
-          >
-        </div>
-
+  <form id="authForm"><div class="form-field" id="nameField">
+  <label for="username">Username</label>
+  <input
+    id="username"
+    name="username"
+    type="text"
+    placeholder="Choose a username"
+    autocomplete="username"
+    minlength="3"
+    maxlength="30"
+    pattern="[A-Za-z0-9_]{3,30}"
+    title="Use 3–30 letters, numbers, or underscores"
+    required>
+</div>
         <div class="form-field">
           <label for="email">Email address</label>
           <input
@@ -82,7 +82,7 @@
       </p>
 
       <p class="auth-note">
-        Learning prototype: this form does not create real accounts yet.
+        Create an account to get started with Inky.
       </p>
     </section>
   </main>

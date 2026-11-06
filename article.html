@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header class="site-header">
     <nav class="navbar">
-      <a href="index.html" class="logo">Inkly</a>
+      <a href="index.html" class="logo">Inky</a>
 
       <div class="nav-links">
         <a href="index.html">Home</a>
@@ -21,43 +22,44 @@
   </header>
 
   <main class="article-page">
+
     <a href="index.html" class="back-link">← Back to Home</a>
 
     <article id="articleContent">
-  <p>Loading article...</p>
-</article>
+      <p>Loading article...</p>
+    </article>
 
-<section id="commentsSection" class="comments-section" hidden>
-  <h2>Comments</h2>
+    <!-- Comments section -->
+    <section id="commentsSection" class="comments-section" hidden>
 
-  <form id="commentForm">
-    <label for="commentName">Your name</label>
-    <input
-      id="commentName"
-      type="text"
-      maxlength="50"
-      required
-      placeholder="Enter your name"
-    >
+      <h2>Comments</h2>
 
-    <label for="commentText">Your comment</label>
-    <textarea
-      id="commentText"
-      maxlength="1000"
-      rows="4"
-      required
-      placeholder="Write your comment..."
-    ></textarea>
+      <form id="commentForm">
 
-    <button type="submit">Post comment</button>
-    <p id="commentMessage" role="status"></p>
-  </form>
+        <label for="commentText">Your comment</label>
 
-  <div id="commentsList"></div>
-</section>
+        <textarea
+          id="commentText"
+          maxlength="2000"
+          rows="4"
+          required
+          placeholder="Write your comment..."
+        ></textarea>
+
+        <button type="submit">Post comment</button>
+
+        <p id="commentMessage" role="status"></p>
+
+      </form>
+
+      <div id="commentsList"></div>
+
+    </section>
+
   </main>
 
   <script src="article.js"></script>
   <script src="comments.js"></script>
+
 </body>
 </html>
