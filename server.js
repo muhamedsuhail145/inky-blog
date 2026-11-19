@@ -5,6 +5,7 @@ const session = require("express-session");
 const PgSession = require("connect-pg-simple")(session);
 const bcrypt = require("bcryptjs");
 const express = require("express");
+const path = require("path");
 const { randomUUID } = require("crypto");
 const cors = require("cors");
 const { Pool } = require("pg");
@@ -65,6 +66,9 @@ app.use(session({
 }));
 
 app.use(express.json({ limit: "100kb" }));
+
+// Serve Inky frontend files.
+app.use(express.static(path.join(__dirname, "public")));
 
 // API status.
 app.get("/api", (req, res) => {
