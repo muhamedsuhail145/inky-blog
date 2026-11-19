@@ -29,14 +29,20 @@ A modern full-stack blogging platform where users can create, publish, manage, a
 - REST API
 
 **Database**
-- SQLite
-- better-sqlite3
+- PostgreSQL
+- Supabase (cloud database hosting)
+- pg (PostgreSQL client for Node.js)
+- Parameterized SQL queries for database operations
 
 **Security**
-- bcryptjs
-- express-session
-- CORS
-- SQLite session storage
+- bcryptjs – Secure password hashing
+- express-session – User session management
+- connect-pg-simple – PostgreSQL session storage
+- CORS – Controls cross-origin access
+- HTTP-only session cookies
+- Environment variables for sensitive configuration
+- Protected API routes with authentication and authorization
+- Input validation for user registration and article submissions
 
 ## Getting Started
 

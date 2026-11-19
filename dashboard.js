@@ -21,9 +21,30 @@ function makeElement(tag, className, text) {
 
 async function loadPosts() {
   try {
+    // First, verify the user's login session.
+    const sessionResponse = await fetch(`${API_BASE}/api/auth/me`, {
+      credentials: "include"
+    });
+
+    // Redirect logged-out users to the login page.
+    if (sessionResponse.status === 401) {
+      window.location.replace("auth.html");
+      return;
+    }
+
+    if (!sessionResponse.ok) {
+      throw new Error("Could not verify your login session.");
+    }
+
+    // Load the logged-in user's articles.
     const response = await fetch(`${API_BASE}/api/my-articles`, {
       credentials: "include"
     });
+
+    if (response.status === 401) {
+      window.location.replace("auth.html");
+      return;
+    }
 
     const data = await response.json();
 

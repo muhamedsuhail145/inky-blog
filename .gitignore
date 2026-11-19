@@ -31,3 +31,10 @@ session-ui - Copy.js
 check-persistence.js
 test-auth-schema.js
 test-database.js
+
+# SQLite migration backups
+backup-sqlite/
+
+# Local backup files
+*.bak
+*.backup
