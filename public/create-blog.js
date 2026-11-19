@@ -1,5 +1,5 @@
 
-const API_BASE = "https://inky-blog.vercel.app";
+const API_BASE = "";
 
 const editPostId = new URLSearchParams(window.location.search).get("edit");
 let editingPost = null;

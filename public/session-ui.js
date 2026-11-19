@@ -1,5 +1,5 @@
 
-const SESSION_API_BASE = "http://localhost:3000";
+const SESSION_API_BASE = "";
 
 const guestLinks = document.getElementById("guestLinks");
 const userLinks = document.getElementById("userLinks");

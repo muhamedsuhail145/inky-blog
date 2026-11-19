@@ -1,5 +1,5 @@
 
-const API_BASE = "https://inky-blog.vercel.app";
+const API_BASE = "";
 
 const dashboardList = document.getElementById("dashboardList");
 const statusFilter = document.getElementById("statusFilter");
