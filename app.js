@@ -50,7 +50,7 @@ const sampleBlogs = [
   }
 ];
 
-const API_BASE = "http://localhost:3000";
+const API_BASE = "https://inky-blog.vercel.app";
 
 const blogGrid = document.getElementById("blogGrid");
 const searchInput = document.getElementById("searchInput");

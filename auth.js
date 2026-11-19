@@ -1,5 +1,5 @@
 
-const API_BASE = "http://localhost:3000";
+const API_BASE = "https://inky-blog.vercel.app";
 
 const form = document.getElementById("authForm");
 const title = document.getElementById("formTitle");

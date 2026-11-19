@@ -3,7 +3,7 @@ const articleContent = document.getElementById("articleContent");
 const params = new URLSearchParams(window.location.search);
 const articleId = params.get("id");
 
-const API_BASE = "http://localhost:3000";
+const API_BASE = "https://inky-blog.vercel.app";
 
 // Keep existing homepage sample-story links working.
 const sampleArticles = [
